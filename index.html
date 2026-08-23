@@ -3,148 +3,432 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Dr. Abhishek H R | Neurosurgeon</title>
-
-    <meta name="description"
-          content="Official website of Dr. Abhishek H R, Neurosurgeon in Bengaluru.">
-
+    <title>Dr. Abhishek H R | Brain & Spine Specialist</title>
     <style>
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2b6cb0;
+            --accent: #319795;
+            --bg-light: #f7fafc;
+            --card-bg: #ffffff;
+            --text-dark: #2d3748;
+            --text-muted: #718096;
+            --border: #e2e8f0;
+        }
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
         }
 
         body {
-            min-height: 100vh;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+            font-size: 0.9rem;
+            display: block;
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-light);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: #e6fffa;
+            color: #234e52;
+            border: 1px solid #b2f5ea;
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.25rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero h2 {
+            font-size: 1.25rem;
+            color: var(--primary-light);
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            max-width: 700px;
+            font-size: 1.05rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-light);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg-light);
+        }
+
+        /* Philosophy Callout */
+        .philosophy {
+            background-color: #ebf8ff;
+            border-left: 4px solid var(--primary-light);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 2.5rem;
+        }
+
+        .philosophy blockquote {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .philosophy p {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
-            justify-content: center;
-
-            font-family:
-                "Segoe UI",
-                Arial,
-                sans-serif;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #eef7f9,
-                    #ffffff
-                );
-
-            color: #102a43;
-            text-align: center;
-            padding: 25px;
+            gap: 0.5rem;
         }
 
-        .container {
-            max-width: 650px;
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
         }
 
-        .name {
-            font-size: 2.6rem;
-            font-weight: 700;
-            margin-bottom: 8px;
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
         }
 
-        .title {
+        /* Cards */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            color: var(--primary);
             font-size: 1.15rem;
-            color: #16817a;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 35px;
+            margin-bottom: 0.75rem;
         }
 
-        .divider {
-            width: 60px;
-            height: 3px;
-            background: #16817a;
-            margin: 0 auto 35px;
-            border-radius: 5px;
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
         }
 
-        h2 {
-            font-size: 1.7rem;
-            margin-bottom: 15px;
+        .card-list {
+            list-style: none;
         }
 
-        .message {
-            color: #627d98;
-            font-size: 1.05rem;
-            line-height: 1.7;
+        .card-list li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-dark);
         }
 
-        .specialities {
-            margin-top: 30px;
-            color: #1f5f8b;
-            font-weight: 600;
+        .card-list li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
         }
 
+        /* Location Card Specifics */
+        .location-info {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .location-info div {
+            margin-bottom: 0.35rem;
+        }
+
+        .location-info strong {
+            color: var(--primary);
+        }
+
+        /* Footer */
         footer {
-            margin-top: 45px;
+            background-color: var(--primary);
+            color: #ffffff;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            margin-top: 3rem;
             font-size: 0.85rem;
-            color: #829ab1;
         }
 
-        @media (max-width: 600px) {
-
-            .name {
-                font-size: 2.1rem;
-            }
-
-            .title {
-                font-size: 1rem;
-            }
-
-            h2 {
-                font-size: 1.45rem;
-            }
-
-            .message {
-                font-size: 0.98rem;
-            }
-
+        footer p {
+            color: #cbd5e0;
+            margin-bottom: 0.5rem;
         }
 
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero {
+                padding: 1.5rem;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
-
 <body>
 
-    <main class="container">
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                Dr. Abhishek H R
+                <span>Brain & Spine Specialist</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#clinics">Clinics</a></li>
+                <li><a href="#education">Patient Education</a></li>
+            </ul>
+        </div>
+    </header>
 
-        <div class="name">
-            Dr. Abhishek H R
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Hero Section -->
+        <section class="hero" id="about">
+            <span class="hero-badge">Neurosurgeon</span>
+            <h1>Dr. Abhishek H R</h1>
+            <h2>Brain & Spine Specialist</h2>
+            <p>Providing expert, transparent, and compassionate neurological care. Focused on thorough diagnostic evaluations, clear treatment planning, and non-surgical management whenever possible.</p>
+            <div class="btn-group">
+                <a href="#clinics" class="btn btn-primary">Book Consultation</a>
+                <a href="#education" class="btn btn-secondary">Patient Resources</a>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="philosophy">
+            <blockquote>"Every neurological symptom deserves clear answers without unnecessary panic."</blockquote>
+            <p>A diagnosis involving the brain or spine can feel overwhelming. My commitment is to provide clear, plain-language evaluations, explore conservative treatment options first, and guide patients through every step of their care.</p>
+        </section>
+
+        <!-- Clinical Expertise -->
+        <h2 class="section-title" id="expertise">Clinical Expertise</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Spine Care</h3>
+                <p>Comprehensive evaluations and treatments for acute and chronic spinal conditions.</p>
+                <ul class="card-list">
+                    <li>Minimally Invasive Spine Surgery</li>
+                    <li>Disc Herniation & Sciatica</li>
+                    <li>Spinal Stenosis</li>
+                    <li>Neck & Chronic Back Pain</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Brain Conditions</h3>
+                <p>Specialized surgical and conservative management for complex cranial health.</p>
+                <ul class="card-list">
+                    <li>Neuro-Oncology & Tumors</li>
+                    <li>Traumatic Brain Injury</li>
+                    <li>Hydrocephalus Care</li>
+                    <li>Cerebrovascular Evaluation</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Consultations</h3>
+                <p>Dedicated medical evaluations and guidance for complex diagnoses.</p>
+                <ul class="card-list">
+                    <li>Comprehensive Second Opinions</li>
+                    <li>Non-Surgical Spine Management</li>
+                    <li>Post-Operative Rehabilitation</li>
+                    <li>Patient & Family Counseling</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="title">
-            NEUROSURGEON · BENGALURU
+        <!-- Clinic Locations -->
+        <h2 class="section-title" id="clinics">Practice Locations & Timings</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Primary Clinic / Hospital</h3>
+                <div class="location-info">
+                    <div><strong>Address:</strong> [Hospital Name / Address Line, Bengaluru]</div>
+                    <div><strong>OPD Days:</strong> Monday – Saturday</div>
+                    <div><strong>Timings:</strong> 10:00 AM – 4:00 PM</div>
+                    <div><strong>Contact:</strong> +91 XXXXXXXXXX</div>
+                </div>
+                <a href="#" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Get Directions</a>
+            </div>
+
+            <div class="card">
+                <h3>Secondary Consultation Center</h3>
+                <div class="location-info">
+                    <div><strong>Address:</strong> [Clinic Name / Address Line, Bengaluru]</div>
+                    <div><strong>OPD Days:</strong> Evening Consultations (By Appointment)</div>
+                    <div><strong>Timings:</strong> 5:00 PM – 7:00 PM</div>
+                    <div><strong>Contact:</strong> +91 XXXXXXXXXX</div>
+                </div>
+                <a href="#" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Get Directions</a>
+            </div>
         </div>
 
-        <div class="divider"></div>
-
-        <h2>
-            A new website is on the way.
-        </h2>
-
-        <p class="message">
-            My website is currently being redesigned to provide
-            patients and families with useful information about
-            brain surgery, spine surgery, stroke and neurointervention.
-        </p>
-
-        <div class="specialities">
-            Brain Surgery · Spine Surgery · Stroke & Neurointervention
+        <!-- Patient Education -->
+        <h2 class="section-title" id="education">Patient Education & Updates</h2>
+        <div class="card" style="margin-bottom: 2rem;">
+            <h3>Understanding Brain & Spine Health</h3>
+            <p>Access patient guides and video breakdowns explaining medical conditions and procedures in simple, everyday language.</p>
+            <div class="btn-group">
+                <a href="#" class="btn btn-secondary" style="font-size: 0.85rem;">Watch on YouTube</a>
+                <a href="#" class="btn btn-secondary" style="font-size: 0.85rem;">Follow on Instagram</a>
+            </div>
         </div>
 
-        <footer>
-            © 2026 Dr. Abhishek H R
-        </footer>
+    </div>
 
-    </main>
+    <!-- Footer -->
+    <footer>
+        <p>© Dr. Abhishek H R. All rights reserved.</p>
+        <p style="font-size: 0.75rem;">Disclaimer: The information provided on this site is for educational purposes and does not replace medical advice from a qualified healthcare provider.</p>
+    </footer>
 
 </body>
 </html>
