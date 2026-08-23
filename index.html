@@ -1,150 +1,1609 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dr. Abhishek H R | Neurosurgeon</title>
-
     <meta name="description"
-          content="Official website of Dr. Abhishek H R, Neurosurgeon in Bengaluru.">
+        content="Dr. Abhishek H R - Neurosurgeon in Bengaluru specialising in Brain Surgery, Spine Surgery, Stroke and Neurointervention.">
+
+    <meta name="author" content="Dr. Abhishek H R">
+
+    <title>
+        Dr. Abhishek H R | Neurosurgeon | Bengaluru
+    </title>
+
 
     <style>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* =========================================
+           BASIC SETTINGS
+        ========================================= */
+
+        :root {
+
+            --navy: #102a43;
+            --blue: #1f5f8b;
+            --teal: #16817a;
+
+            --light: #f5f9fb;
+            --lighter: #f9fcfd;
+
+            --text: #243b53;
+            --muted: #627d98;
+
+            --white: #ffffff;
+
+            --border: #d9e2ec;
+
         }
 
+
+        * {
+
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
         body {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
 
             font-family:
                 "Segoe UI",
                 Arial,
                 sans-serif;
 
+            color: var(--text);
+
+            background: var(--white);
+
+            line-height: 1.7;
+
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+            color: inherit;
+
+        }
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background: rgba(255,255,255,0.97);
+
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid var(--border);
+
+        }
+
+
+        nav {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 16px 25px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+
+        .logo {
+
+            color: var(--navy);
+
+            font-size: 1.2rem;
+
+            font-weight: 700;
+
+            line-height: 1.2;
+
+        }
+
+
+        .logo span {
+
+            display: block;
+
+            color: var(--teal);
+
+            font-size: 0.68rem;
+
+            letter-spacing: 1.5px;
+
+            margin-top: 3px;
+
+        }
+
+
+        .nav-links {
+
+            list-style: none;
+
+            display: flex;
+
+            gap: 28px;
+
+            font-size: 0.92rem;
+
+            font-weight: 500;
+
+        }
+
+
+        .nav-links a {
+
+            transition: 0.3s;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--teal);
+
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+
             background:
                 linear-gradient(
-                    135deg,
-                    #eef7f9,
-                    #ffffff
+                    120deg,
+                    #edf7f9,
+                    #ffffff 55%,
+                    #eef6f9
                 );
 
-            color: #102a43;
-            text-align: center;
-            padding: 25px;
+            min-height: 650px;
+
+            display: flex;
+
+            align-items: center;
+
         }
 
-        .container {
-            max-width: 650px;
+
+        .hero-inner {
+
+            max-width: 1200px;
+
+            width: 100%;
+
+            margin: auto;
+
+            padding: 80px 25px;
+
+            display: grid;
+
+            grid-template-columns: 1.1fr 0.9fr;
+
+            gap: 70px;
+
+            align-items: center;
+
         }
 
-        .name {
-            font-size: 2.6rem;
+
+        .hero-label {
+
+            color: var(--teal);
+
             font-weight: 700;
-            margin-bottom: 8px;
+
+            font-size: 0.82rem;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+
         }
 
-        .title {
-            font-size: 1.15rem;
-            color: #16817a;
+
+        .hero h1 {
+
+            font-size: 3.6rem;
+
+            line-height: 1.1;
+
+            color: var(--navy);
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .hero h1 span {
+
+            color: var(--blue);
+
+        }
+
+
+        .hero-title {
+
+            font-size: 1.35rem;
+
             font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 35px;
-        }
 
-        .divider {
-            width: 60px;
-            height: 3px;
-            background: #16817a;
-            margin: 0 auto 35px;
-            border-radius: 5px;
-        }
+            color: var(--text);
 
-        h2 {
-            font-size: 1.7rem;
             margin-bottom: 15px;
+
         }
 
-        .message {
-            color: #627d98;
+
+        .hero-text {
+
+            color: var(--muted);
+
             font-size: 1.05rem;
-            line-height: 1.7;
+
+            max-width: 620px;
+
+            margin-bottom: 30px;
+
         }
 
-        .specialities {
-            margin-top: 30px;
-            color: #1f5f8b;
-            font-weight: 600;
+
+        .hero-buttons {
+
+            display: flex;
+
+            gap: 14px;
+
+            flex-wrap: wrap;
+
         }
+
+
+        .button {
+
+            display: inline-block;
+
+            padding: 12px 24px;
+
+            border-radius: 7px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+
+        }
+
+
+        .button-primary {
+
+            background: var(--teal);
+
+            color: white;
+
+        }
+
+
+        .button-primary:hover {
+
+            transform: translateY(-2px);
+
+        }
+
+
+        .button-outline {
+
+            border: 1px solid var(--blue);
+
+            color: var(--blue);
+
+            background: white;
+
+        }
+
+
+        .button-outline:hover {
+
+            background: #edf6fa;
+
+        }
+
+
+        /* =========================================
+           PHOTO AREA
+        ========================================= */
+
+        .doctor-photo {
+
+            min-height: 470px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #dceff3,
+                    #f7fbfc
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 30px;
+
+            border: 1px solid var(--border);
+
+            box-shadow:
+                0 20px 50px
+                rgba(16,42,67,0.10);
+
+        }
+
+
+        .doctor-photo-placeholder {
+
+            color: var(--muted);
+
+        }
+
+
+        .doctor-photo-placeholder strong {
+
+            display: block;
+
+            color: var(--blue);
+
+            font-size: 1.2rem;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        /* =========================================
+           GENERAL SECTION
+        ========================================= */
+
+        .section {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 90px 25px;
+
+        }
+
+
+        .section-heading {
+
+            text-align: center;
+
+            max-width: 720px;
+
+            margin: 0 auto 50px;
+
+        }
+
+
+        .eyebrow {
+
+            color: var(--teal);
+
+            font-size: 0.78rem;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .section-heading h2 {
+
+            color: var(--navy);
+
+            font-size: 2.35rem;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .section-heading p {
+
+            color: var(--muted);
+
+        }
+
+
+        /* =========================================
+           PRACTICE AREAS
+        ========================================= */
+
+        .practice-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .practice-card {
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            padding: 35px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .practice-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(16,42,67,0.09);
+
+        }
+
+
+        .practice-icon {
+
+            font-size: 2rem;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .practice-card h3 {
+
+            color: var(--navy);
+
+            font-size: 1.3rem;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .practice-card p {
+
+            color: var(--muted);
+
+            font-size: 0.95rem;
+
+        }
+
+
+        /* =========================================
+           CONDITIONS
+        ========================================= */
+
+        .conditions {
+
+            background: var(--light);
+
+        }
+
+
+        .conditions-inner {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 90px 25px;
+
+        }
+
+
+        .condition-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        .condition {
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            padding: 22px;
+
+            border-radius: 10px;
+
+        }
+
+
+        .condition h3 {
+
+            color: var(--blue);
+
+            margin-bottom: 6px;
+
+            font-size: 1.05rem;
+
+        }
+
+
+        .condition p {
+
+            color: var(--muted);
+
+            font-size: 0.9rem;
+
+        }
+
+
+        /* =========================================
+           EDUCATION
+        ========================================= */
+
+        .education {
+
+            background: var(--navy);
+
+            color: white;
+
+        }
+
+
+        .education-inner {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            padding: 90px 25px;
+
+            text-align: center;
+
+        }
+
+
+        .education .eyebrow {
+
+            color: #7dd3c7;
+
+        }
+
+
+        .education h2 {
+
+            font-size: 2.4rem;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .education p {
+
+            max-width: 700px;
+
+            margin: 0 auto 30px;
+
+            opacity: 0.85;
+
+        }
+
+
+        .education-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 14px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .education .button-primary {
+
+            background: var(--teal);
+
+        }
+
+
+        .education .button-outline {
+
+            background: transparent;
+
+            color: white;
+
+            border-color: rgba(255,255,255,0.5);
+
+        }
+
+
+        /* =========================================
+           APPOINTMENT
+        ========================================= */
+
+        .appointment {
+
+            background: var(--light);
+
+        }
+
+
+        .appointment-inner {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            padding: 90px 25px;
+
+            text-align: center;
+
+        }
+
+
+        .appointment h2 {
+
+            color: var(--navy);
+
+            font-size: 2.3rem;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .appointment p {
+
+            color: var(--muted);
+
+            margin-bottom: 30px;
+
+        }
+
+
+        /* =========================================
+           ABOUT
+        ========================================= */
+
+        .about {
+
+            background: white;
+
+        }
+
+
+        .about-inner {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 90px 25px;
+
+            display: grid;
+
+            grid-template-columns: 0.8fr 1.2fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+        }
+
+
+        .about-photo {
+
+            min-height: 390px;
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #e5f2f5,
+                    #f8fbfc
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: var(--muted);
+
+            padding: 30px;
+
+        }
+
+
+        .about-text h2 {
+
+            color: var(--navy);
+
+            font-size: 2.3rem;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .about-text p {
+
+            color: var(--muted);
+
+            margin-bottom: 15px;
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
 
         footer {
-            margin-top: 45px;
-            font-size: 0.85rem;
-            color: #829ab1;
+
+            background: #0b2033;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px 25px;
+
         }
 
-        @media (max-width: 600px) {
 
-            .name {
-                font-size: 2.1rem;
+        .footer-name {
+
+            font-weight: 700;
+
+            font-size: 1.1rem;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        footer p {
+
+            opacity: 0.75;
+
+            font-size: 0.85rem;
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+
+                display: none;
+
             }
 
-            .title {
-                font-size: 1rem;
+
+            .hero {
+
+                min-height: auto;
+
             }
 
-            h2 {
-                font-size: 1.45rem;
+
+            .hero-inner {
+
+                grid-template-columns: 1fr;
+
+                padding-top: 65px;
+
+                padding-bottom: 65px;
+
+                gap: 40px;
+
             }
 
-            .message {
-                font-size: 0.98rem;
+
+            .hero h1 {
+
+                font-size: 2.7rem;
+
+            }
+
+
+            .doctor-photo {
+
+                min-height: 350px;
+
+            }
+
+
+            .practice-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .condition-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .about-inner {
+
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+
+            }
+
+
+            .about-photo {
+
+                min-height: 300px;
+
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .hero h1 {
+
+                font-size: 2.25rem;
+
+            }
+
+
+            .hero-title {
+
+                font-size: 1.1rem;
+
+            }
+
+
+            .section-heading h2,
+            .education h2,
+            .appointment h2,
+            .about-text h2 {
+
+                font-size: 1.9rem;
+
             }
 
         }
 
     </style>
+
 </head>
+
 
 <body>
 
-    <main class="container">
 
-        <div class="name">
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <header>
+
+        <nav>
+
+            <a href="#" class="logo">
+
+                Dr. Abhishek H R
+
+                <span>
+                    NEUROSURGEON · BENGALURU
+                </span>
+
+            </a>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#practice">
+                        Expertise
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#conditions">
+                        Conditions
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#education">
+                        Patient Education
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#appointment">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="hero">
+
+        <div class="hero-inner">
+
+
+            <div>
+
+                <div class="hero-label">
+                    Neurosurgeon · Bengaluru
+                </div>
+
+
+                <h1>
+
+                    Dr. Abhishek H R
+
+                    <br>
+
+                    <span>
+                        Neurosurgeon
+                    </span>
+
+                </h1>
+
+
+                <div class="hero-title">
+
+                    Brain Surgery · Spine Surgery ·
+                    Stroke & Neurointervention
+
+                </div>
+
+
+                <p class="hero-text">
+
+                    Clear, evidence-based neurosurgical care
+                    with an emphasis on helping patients and
+                    families understand their condition,
+                    treatment options and the decisions ahead.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#appointment"
+                       class="button button-primary">
+
+                        Book an Appointment
+
+                    </a>
+
+
+                    <a href="#education"
+                       class="button button-outline">
+
+                        Patient Education
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PHOTO WILL BE ADDED LATER -->
+
+            <div class="doctor-photo">
+
+                <div class="doctor-photo-placeholder">
+
+                    <strong>
+                        Your Professional Photograph
+                    </strong>
+
+                    This space will be replaced with
+                    your photograph.
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PRACTICE AREAS
+    ========================================== -->
+
+    <section class="section" id="practice">
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                Areas of Practice
+            </div>
+
+            <h2>
+                What I Do
+            </h2>
+
+            <p>
+
+                Neurosurgical care across three
+                closely related areas.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="practice-grid">
+
+
+            <div class="practice-card">
+
+                <div class="practice-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Brain Surgery
+                </h3>
+
+                <p>
+
+                    Surgical management of conditions
+                    affecting the brain, including
+                    emergency and elective neurosurgical
+                    problems.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="practice-card">
+
+                <div class="practice-icon">
+                    🦴
+                </div>
+
+                <h3>
+                    Spine Surgery
+                </h3>
+
+                <p>
+
+                    Surgical treatment of spinal
+                    conditions using appropriate
+                    open and minimally invasive
+                    approaches.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="practice-card">
+
+                <div class="practice-icon">
+                    🩸
+                </div>
+
+                <h3>
+                    Stroke & Neurointervention
+                </h3>
+
+                <p>
+
+                    Endovascular treatment of stroke
+                    and other conditions involving
+                    the blood vessels of the brain.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CONDITIONS
+    ========================================== -->
+
+    <section class="conditions" id="conditions">
+
+        <div class="conditions-inner">
+
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    Conditions
+                </div>
+
+                <h2>
+                    Conditions I Treat
+                </h2>
+
+                <p>
+
+                    Common neurological and neurosurgical
+                    conditions that may require specialist
+                    assessment or treatment.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="condition-grid">
+
+
+                <div class="condition">
+
+                    <h3>
+                        Brain Tumours
+                    </h3>
+
+                    <p>
+                        Evaluation and surgical management
+                        of selected brain tumours.
+                    </p>
+
+                </div>
+
+
+
+                <div class="condition">
+
+                    <h3>
+                        Head Injury
+                    </h3>
+
+                    <p>
+                        Assessment and surgical care of
+                        traumatic brain injuries.
+                    </p>
+
+                </div>
+
+
+
+                <div class="condition">
+
+                    <h3>
+                        Brain Haemorrhage
+                    </h3>
+
+                    <p>
+                        Management of intracranial bleeding
+                        and related neurosurgical conditions.
+                    </p>
+
+                </div>
+
+
+
+                <div class="condition">
+
+                    <h3>
+                        Stroke
+                    </h3>
+
+                    <p>
+                        Evaluation and appropriate
+                        intervention in selected stroke patients.
+                    </p>
+
+                </div>
+
+
+
+                <div class="condition">
+
+                    <h3>
+                        Brain Aneurysms
+                    </h3>
+
+                    <p>
+                        Assessment and treatment of
+                        selected cerebral aneurysms.
+                    </p>
+
+                </div>
+
+
+
+                <div class="condition">
+
+                    <h3>
+                        Spine Disorders
+                    </h3>
+
+                    <p>
+                        Surgical treatment of selected
+                        degenerative and traumatic spine conditions.
+                    </p>
+
+                </div>
+
+
+
+                <div class="condition">
+
+                    <h3>
+                        Disc Problems
+                    </h3>
+
+                    <p>
+                        Assessment and treatment of
+                        symptomatic spinal disc disease.
+                    </p>
+
+                </div>
+
+
+
+                <div class="condition">
+
+                    <h3>
+                        Spinal Stenosis
+                    </h3>
+
+                    <p>
+                        Evaluation of narrowing affecting
+                        the spinal canal or neural structures.
+                    </p>
+
+                </div>
+
+
+
+                <div class="condition">
+
+                    <h3>
+                        Vascular Conditions of the Brain
+                    </h3>
+
+                    <p>
+                        Evaluation of selected conditions
+                        affecting cerebral blood vessels.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PATIENT EDUCATION
+    ========================================== -->
+
+    <section class="education" id="education">
+
+        <div class="education-inner">
+
+
+            <div class="eyebrow">
+                Patient Education
+            </div>
+
+
+            <h2>
+
+                Neurosurgery can be complicated.
+                Understanding it doesn't have to be.
+
+            </h2>
+
+
+            <p>
+
+                I create educational content to explain
+                brain, spine and neurological conditions
+                in simple language — without unnecessary
+                medical jargon.
+
+            </p>
+
+
+            <div class="education-buttons">
+
+
+                <!-- Replace with your actual links later -->
+
+                <a href="https://www.youtube.com"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="button button-primary">
+
+                    ▶ YouTube
+
+                </a>
+
+
+                <a href="https://www.instagram.com"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="button button-outline">
+
+                    ◎ Instagram
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         APPOINTMENT
+    ========================================== -->
+
+    <section class="appointment"
+             id="appointment">
+
+        <div class="appointment-inner">
+
+
+            <div class="eyebrow">
+                Consultation
+            </div>
+
+
+            <h2>
+                Need a neurosurgical opinion?
+            </h2>
+
+
+            <p>
+
+                For appointments and consultation
+                information, please get in touch.
+
+            </p>
+
+
+            <a href="#"
+               class="button button-primary">
+
+                Contact / Book Appointment
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         ABOUT
+    ========================================== -->
+
+    <section class="about"
+             id="about">
+
+        <div class="about-inner">
+
+
+            <div class="about-photo">
+
+                <div>
+
+                    <strong>
+                        Professional Photograph
+                    </strong>
+
+                    Your photograph will be
+                    added here later.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="about-text">
+
+
+                <div class="eyebrow">
+                    About
+                </div>
+
+
+                <h2>
+                    Dr. Abhishek H R
+                </h2>
+
+
+                <p>
+
+                    I am a neurosurgeon based in Bengaluru
+                    with clinical interests spanning brain
+                    surgery, spine surgery, stroke and
+                    neurointervention.
+
+                </p>
+
+
+                <p>
+
+                    My approach is centred around understanding
+                    the patient's condition, explaining the
+                    available treatment options clearly and
+                    helping patients and families make informed
+                    decisions.
+
+                </p>
+
+
+                <p>
+
+                    Alongside clinical practice, I have a strong
+                    interest in patient education and communicating
+                    neurological and neurosurgical topics in a
+                    way that is accessible to everyone.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div class="footer-name">
             Dr. Abhishek H R
         </div>
 
-        <div class="title">
-            NEUROSURGEON · BENGALURU
-        </div>
 
-        <div class="divider"></div>
-
-        <h2>
-            A new website is on the way.
-        </h2>
-
-        <p class="message">
-            My website is currently being redesigned to provide
-            patients and families with useful information about
-            brain surgery, spine surgery, stroke and neurointervention.
+        <p>
+            Neurosurgeon · Brain Surgery · Spine Surgery ·
+            Stroke & Neurointervention
         </p>
 
-        <div class="specialities">
-            Brain Surgery · Spine Surgery · Stroke & Neurointervention
-        </div>
 
-        <footer>
-            © 2026 Dr. Abhishek H R
-        </footer>
+        <br>
 
-    </main>
+
+        <p>
+            © 2026 Dr. Abhishek H R. All rights reserved.
+        </p>
+
+    </footer>
+
 
 </body>
+
 </html>
