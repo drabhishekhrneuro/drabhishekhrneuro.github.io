@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Condition Name] | Dr. Abhishek H R</title>
+  
+  <!-- Google Fonts for Typography Consistency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <style>
+    main.container {
+      width: 100%;
+      max-width: 100%;
+      padding: 20px 0;
+    }
+    .condition-detail-header {
+      text-align: center;
+      padding: 20px 20px 10px;
+    }
+    .condition-category {
+      color: #1f5f8b;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+    .symptom-box {
+      background: #f8fafc;
+      border-left: 4px solid #1f5f8b;
+      padding: 15px 20px;
+      margin-bottom: 12px;
+      border-radius: 0 6px 6px 0;
+    }
+    .symptom-box h4 {
+      margin: 0 0 5px 0;
+      color: #102a43;
+    }
+    .symptom-box p {
+      margin: 0;
+      color: #486581;
+      font-size: 0.95rem;
+    }
+    .breadcrumb {
+      margin-bottom: 20px;
+      padding: 0 20px;
+      font-size: 0.9rem;
+    }
+    .breadcrumb a {
+      color: #1f5f8b;
+      text-decoration: none;
+    }
+    .info-section, 
+    .appointment {
+      width: 100%;
+      max-width: 100%;
+      margin: 30px 0;
+      padding: 30px 20px;
+      background: #ffffff;
+      border-top: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+      border-radius: 0;
+      box-sizing: border-box;
+    }
+    .info-section h2 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo-name">
+      <img src="logo.svg" alt="Dr. Abhishek H R" class="logo">
+      <div class="doctor-info">
+        <span class="doctor-name">Dr. Abhishek H R</span>
+        <span class="doctor-title">Hybrid Neurosurgeon</span>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="patient-info.html" class="active">Patient Information</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Article Body -->
+  <main class="container">
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+      <a href="procedures.html">&larr; Back to Procedures</a>
+    </div>
+
+    <!-- Article Header -->
+    <section class="condition-detail-header">
+      <span class="condition-category">[Category]</span>
+      <h1>[Condition Name]</h1>
+    </section>
+
+<!-- Single Featured Image -->
+<section class="condition-featured-media">
+  <div class="media-grid-one-col">
+    <figure class="media-container">
+      <img 
+        src="image-name.jpg" 
+        alt="Diagram showing the condition" 
+        class="condition-hero-image"
+        loading="lazy"
+      >
+      <figcaption class="media-caption">
+        Illustration showing the explanation of the image in a single line.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- Two Images Side-by-Side -->
+<section class="condition-featured-media">
+  <div class="media-grid-two-col">
+    <figure class="media-container">
+      <img 
+        src="image-1-name.jpg" 
+        alt="diagram showing the condition" 
+        class="condition-hero-image"
+        loading="lazy"
+      >
+      <figcaption class="media-caption">
+        explanation of the image.
+      </figcaption>
+    </figure>
+
+    <figure class="media-container">
+      <img 
+        src="image-2-name.jpg" 
+        alt="Diagram showing the condition" 
+        class="condition-hero-image"
+        loading="lazy"
+      >
+      <figcaption class="media-caption">
+        explanation of the image
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+    <!-- Overview -->
+    <section class="info-section">
+      <h2>What Is [Condition Name]?</h2>
+      <p>[Overview paragraph 1]</p>
+      <p>[Overview paragraph 2]</p>
+      <p>[Overview paragraph 3]</p>
+    </section>
+
+    <!-- Symptoms -->
+    <section class="info-section">
+      <h2>Key Symptoms & What to Look For</h2>
+      <p>[Introductory sentence about symptoms]</p>
+      <div class="symptom-box"><h4>[Symptom Title]</h4><p>[Symptom description]</p></div>
+      <div class="symptom-box"><h4>[Symptom Title]</h4><p>[Symptom description]</p></div>
+      <!-- Repeat as needed -->
+    </section>
+
+    <!-- Discovery -->
+    <section class="info-section">
+      <h2>How Is It Discovered?</h2>
+      <p>[Introductory sentence]</p>
+      <ul class="teaser-list">
+        <li><strong>[Method]:</strong> [Explanation]</li>
+        <li><strong>[Method]:</strong> [Explanation]</li>
+      </ul>
+    </section>
+
+    <!-- Treatment -->
+    <section class="info-section">
+      <h2>How Is It Treated?</h2>
+      <p>[Introductory sentence]</p>
+      <ul class="teaser-list">
+        <li><strong>[Treatment Option]:</strong> [Explanation]</li>
+        <li><strong>[Treatment Option]:</strong> [Explanation]</li>
+      </ul>
+    </section>
+
+<!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Dr. Abhishek H R · Hybrid Neurosurgeon · Bengaluru</p>
+    <p class="disclaimer">
+      Disclaimer: This website is intended for educational and informational purposes only.
+      It does not provide medical advice or replace professional consultation.
+      Patients should seek direct medical evaluation for personalised care.
+    </p>
+    <div class="social">
+      <a href="https://www.youtube.com/@drabhishekhrneuro" target="_blank">YouTube</a> | 
+      <a href="https://instagram.com/drabhishekhrneuro" target="_blank">Instagram</a> | 
+      <a href="https://www.linkedin.com/in/abhishek-hadadi-00b94813a" target="_blank">LinkedIn</a> | 
+      <a href="https://wa.me/919834741453" target="_blank">WhatsApp</a>
+    </div>
+  </footer>
+
+
+</body>
+</html>
