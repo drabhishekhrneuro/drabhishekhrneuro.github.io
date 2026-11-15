@@ -1,0 +1,649 @@
+/* =========================================================
+   DR ABHISHEK H R - WEBSITE STYLESHEET
+   ========================================================= */
+
+/* 1. Global Reset & Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding-top: 90px;
+  font-family: 'Lato', Arial, sans-serif;
+  background-color: #f9fcfd;
+  color: #243b53;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Merriweather', serif;
+  color: #102a43;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  padding: 40px 20px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 2. Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background: #1f5f8b;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 1000;
+}
+
+.logo-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.doctor-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.doctor-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.doctor-title {
+  font-size: 0.85rem;
+  color: #e0e0e0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a.active {
+  color: #ffe066;
+  border-bottom: 2px solid #ffe066;
+  padding-bottom: 3px;
+}
+
+/* 3. Hero Section */
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #f9fcfd, #e0f2fe);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #102a43;
+  margin: 0 0 10px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: #1f5f8b;
+  margin: 0 0 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #627d98;
+  max-width: 750px;
+  margin: 0 auto 20px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-photo {
+  width: 250px;
+  height: 300px;
+  background-color: #d9e2ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #627d98;
+  font-size: 1rem;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* 4. Global Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.hero .btn {
+  background-color: #1f5f8b;
+  color: #ffffff;
+}
+
+.hero .btn:hover {
+  background-color: #243b53;
+}
+
+.btn-lightblue {
+  background: #e0f2fe;
+  color: #1f5f8b;
+  border: 2px solid #1f5f8b;
+}
+
+.btn-lightblue:hover {
+  background: #1f5f8b;
+  color: #ffffff;
+}
+
+.btn-highlight {
+  background: #ff0000;
+  color: #ffffff;
+  border: 2px solid #b30000;
+}
+
+.btn-highlight:hover {
+  background: #b30000;
+}
+
+.btn-secondary {
+  background: #28a745;
+  color: #ffffff;
+  border: 2px solid #28a745;
+}
+
+.btn-secondary:hover {
+  background: #1e7e34;
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: #ffffff;
+  border: 2px solid #1da851;
+}
+
+.btn-whatsapp:hover {
+  background: #1da851;
+}
+
+/* 5. General Layout & Sections */
+.about-snippet, .contact-snippet {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #ffffff;
+  margin-bottom: 40px;
+  border-top: 1px solid #d9e2ec;
+}
+
+.about-section, .info-section, .patient-info, .info-links, .youtube-videos, .appointment {
+  width: 100%;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 25px;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.appointment .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.teaser-list {
+  max-width: 750px;
+  margin: 10px auto;
+  padding-left: 20px;
+  color: #555;
+  text-align: left;
+}
+
+/* 6. About Page Layout */
+.about-hero {
+  text-align: center;
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+.intro-content, .about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.intro-text, .about-text {
+  flex: 2;
+}
+
+.intro-photo, .about-photo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.photo-placeholder {
+  width: 300px;
+  height: 400px;
+  background: #e0e0e0;
+  border: 2px dashed #aaaaaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 1.1em;
+  border-radius: 8px;
+}
+
+/* Timeline */
+.timeline {
+  list-style: none;
+  max-width: 800px;
+  margin: 20px auto;
+  padding-left: 0;
+  text-align: left;
+}
+
+.timeline li {
+  margin: 12px 0;
+  padding: 10px 10px 10px 20px;
+  border-left: 3px solid #007BFF;
+  position: relative;
+}
+
+.timeline li::before {
+  content: "●";
+  position: absolute;
+  left: -12px;
+  color: #007BFF;
+  font-size: 1.2em;
+}
+
+.timeline .year {
+  font-weight: bold;
+  color: #333;
+  margin-right: 8px;
+}
+
+.timeline .degree {
+  font-weight: bold;
+  color: #007BFF;
+}
+
+/* 7. Blog & Video Controls */
+/* YouTube Section Layout */
+.youtube-videos {
+  width: 100%;
+  max-width: 1100px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.video-carousel {
+  display: flex;
+  flex-wrap: wrap;             /* Allows items to wrap cleanly */
+  justify-content: space-evenly; /* Spacers evenly between items & outer edges */
+  align-items: center;
+  gap: 20px;                   /* Consistent space between video cards */
+  padding: 20px 0;
+}
+
+.video-item {
+  flex: 0 1 200px;             /* Flexible sizing for 4 to 5 videos across screen */
+  max-width: 280px;
+}
+
+.video-item iframe {
+  width: 100%;
+  border-radius: 6px;
+}
+.blog-search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.blog-search input {
+  width: 60%;
+  max-width: 600px;
+  padding: 10px;
+  border: 2px solid #1f5f8b;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* 8. Forms Section */
+.centered-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.centered-section form {
+  width: 90%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.centered-section input,
+.centered-section textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* 9. Footer */
+footer {
+  background: #102a43;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+footer .disclaimer {
+  font-size: 0.8rem;
+  color: #d9e2ec;
+}
+
+footer .social a {
+  color: #ffffff;
+  margin: 0 5px;
+}
+
+/* 10. Responsive Media Queries */
+@media (max-width: 850px) {
+  body {
+    padding-top: 140px;
+  }
+
+  .navbar {
+    height: auto;
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero-content, .intro-content, .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-text, .about-text {
+    text-align: center;
+  }
+}
+/* =========================================================
+   UNIFORM FULL-WIDTH SECTIONS
+   ========================================================= */
+
+/* Make all card/section wrappers take up 100% of their container */
+.about-section, 
+.info-section, 
+.patient-info, 
+.info-links, 
+.youtube-videos, 
+.appointment,
+.centered-section {
+  width: 100%;
+  max-width: 100%; /* Spans full available width of the main layout */
+  margin: 30px 0;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Ensure the main page area constrains the content uniformly */
+main, 
+.container {
+  width: 90%;
+  max-width: 1100px; /* Controls maximum readability width */
+  margin: 0 auto;
+}
+
+.intro-content, 
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  text-align: left;
+}
+
+.info-section ul {
+  list-style: none !important;
+  list-style-type: none !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.info-section li {
+  list-style: none !important;
+  list-style-type: none !important;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+    .condition-card-link {
+      text-decoration: none;
+      color: #004080;
+      font-weight: bold;
+      display: block;
+    }
+
+    .condition-card-link:visited {
+      color: #004080;
+    }
+
+    .condition-card-link:hover .condition-card {
+      background: #e6f2ff;
+      color: #0066cc;
+    }
+
+/* Base Media Section Styling */
+.condition-featured-media {
+  margin: 1.5rem 0 2.5rem 0;
+  width: 100%;
+}
+
+.condition-featured-media .media-container {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Common Image Styling */
+.condition-hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: block;
+  object-fit: cover;
+}
+
+/* Caption Styling */
+.media-caption {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: #555555;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* Layout 1: Single Image Grid */
+.media-grid-one-col {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Layout 2: Two-Column Side-by-Side Grid */
+.media-grid-two-col {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.media-grid-two-col .media-container {
+  flex: 1;
+}
+
+/* Mobile Responsiveness (Stacks 2 images vertically on small screens) */
+@media (max-width: 600px) {
+  .media-grid-two-col {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* =========================================================
+   MOBILE SCREEN OPTIMIZATIONS (Phones under 600px)
+   ========================================================= */
+@media (max-width: 600px) {
+  /* Adjust top padding to match the stacked mobile navbar height */
+  body {
+    padding-top: 175px;
+  }
+
+  /* Make navigation links fit comfortably on small screens */
+  .navbar {
+    padding: 12px 10px;
+    gap: 10px;
+  }
+
+  nav {
+    gap: 10px 14px;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+
+  /* Scale down large hero headings so words don't break awkwardly */
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Reduce section padding so content has more breathing room */
+  main,
+  .container {
+    width: 95%;
+  }
+
+  .about-section,
+  .info-section,
+  .patient-info,
+  .info-links,
+  .youtube-videos,
+  .appointment,
+  .centered-section {
+    padding: 20px 15px;
+    margin: 20px 0;
+  }
+
+  /* Make buttons stack cleanly and span full width on phones */
+  .btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  /* Ensure blog search bar widens on mobile */
+  .blog-search input {
+    width: 95%;
+  }
+}

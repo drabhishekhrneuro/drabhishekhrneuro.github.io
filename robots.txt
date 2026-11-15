@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://drabhishekhrneuro.com/sitemap.xml
